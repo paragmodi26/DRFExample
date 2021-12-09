@@ -21,9 +21,11 @@ from rest_framework_simplejwt import views as jwt_views
 from crud import views
 
 urlpatterns = [
-    path('register-api/', views.RegisterView.as_view(), name="Register"),
-    path('login-api/', jwt_views.TokenObtainPairView.as_view(), name="login"),
-    path('login-api-refreshtoken/', jwt_views.TokenRefreshView.as_view(), name="login_refresh_token"),
-    path('user-home/', views.Home.as_view(), name="home")
+    path('register-api/', views.RegisterView.as_view()),
+    path('login-api/', jwt_views.TokenObtainPairView.as_view()),
+    path('login-api-refreshtoken/', jwt_views.TokenRefreshView.as_view()),
+    path('user-home/', views.Home.as_view()),
+    path('profile/', views.Profile.as_view()),
+    # path('change_password')
 
 ]
